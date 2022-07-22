@@ -1,38 +1,88 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+/* Hearder Section */
+
+.hearder {
+  background-color: rgb(170, 169, 140);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+h1,
+.cartIcon {
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 5%;
+}
+
+.shopCard {
+  border: 1px solid skyblue;
+  height: max-content;
+  width: fit-content;
+  padding: 20px;
+  background-color: lightgray;
+}
+
+.shopCard button {
+  background-color: #36AE7C;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.shopCard .carInfo {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.shopCard h3 {
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Order Item Section */
+
+.orderContainer {
+  background-color: lightgray;
+  height: 100vh;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.orderItems,
+.totalPrice {
+  text-align: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.orderItems button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.orderItems .add {
+  background-color: lightseagreen;
+}
+
+.orderItems .remove {
+  background-color: #f04040;
 }
