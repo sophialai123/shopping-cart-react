@@ -18,12 +18,3 @@ export default function Hearder(props) {
     </div>
   )
 }
-
-
-// {addItems.map((item) => {
-//   return (
-//     <div>
-//       <h3 key={item.id}>{item.qty}</h3>
-//     </div>
-//   )
-// })}

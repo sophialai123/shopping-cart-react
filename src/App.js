@@ -15,16 +15,17 @@ function App() {
     const existItem = addItems.find(x => x.id === item.id);
     if (existItem) {
       let items = addItems.map((x => {
-        if (x.id === item.id) { return {
-          ...existItem, "qty": existItem.qty + parseInt(quantity)
-        }
+        if (x.id === item.id) {
+          return {
+            ...existItem, "qty": existItem.qty + parseInt(quantity)
+          }
         } else {
           return x
         }
       }))
       setAddItems(items)
     } else {
-      setAddItems([...addItems, { ...item, "qty": quantity }])
+      setAddItems([...addItems, { ...item, "qty": parseInt(quantity) }])
     }
   }
 
@@ -72,7 +73,6 @@ function App() {
         }
       </div>
       <OrderItems addItems={addItems} addToCart={addToCart} toRemove={toRemove} addOneItem={addOneItem} />
-
     </div>
   );
 }

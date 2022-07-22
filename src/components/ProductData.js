@@ -21,23 +21,23 @@ export const ProductData = [
     img: MacBookM1,
 
   },
-  {
-    id: 4,
-    name: "MacBook Air M4",
-    price: 3600,
-    img: MacBookM1
-  },
-  {
-    id: 5,
-    name: "MacBook Air M5",
-    price: 4000,
-    img: MacBookM2
-  },
-  {
-    id: 6,
-    name: "MacBook Air M6",
-    price: 4500,
-    img: MacBookM1,
+  // {
+  //   id: 4,
+  //   name: "MacBook Air M4",
+  //   price: 3600,
+  //   img: MacBookM1
+  // },
+  // {
+  //   id: 5,
+  //   name: "MacBook Air M5",
+  //   price: 4000,
+  //   img: MacBookM2
+  // },
+  // {
+  //   id: 6,
+  //   name: "MacBook Air M6",
+  //   price: 4500,
+  //   img: MacBookM1,
 
-  }
+  // }
 ]
