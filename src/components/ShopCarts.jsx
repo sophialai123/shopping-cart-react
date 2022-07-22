@@ -9,9 +9,7 @@ export default function ShopCarts(props) {
   const { img, name, price } = props.item
 
   function handleChange(event) {
-    console.log(event.target.value)
     setInputText(event.target.value);
-
   }
 
   return (
@@ -19,7 +17,7 @@ export default function ShopCarts(props) {
       <img src={img} alt={img} />
       <div className="carInfo">
         <h3>{name}</h3>
-        <h3>$ {price}.00</h3>
+        <h3>$ {price.toFixed(2)}</h3>
         <label>Quantity: </label>
         <input onChange={handleChange} value={inputText} min="0" type='number' required /><br />
         <button onClick={() => addToCart(item, inputText)}>Add to Cart</button>

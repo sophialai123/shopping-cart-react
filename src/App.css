@@ -11,7 +11,6 @@ button:hover {
 }
 
 /* Hearder Section */
-
 .hearder {
   background-color: rgb(170, 169, 140);
   display: flex;
@@ -27,6 +26,13 @@ h1,
   font-weight: bold;
   margin: 15px;
   cursor: pointer;
+}
+
+.cartqty {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  color: #f04040;
 }
 
 .container {
@@ -79,6 +85,7 @@ h1,
   height: max-content;
   margin: 5%;
   width: 78%;
+  border-radius: 8px;
 
 }
 

@@ -3,17 +3,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import OrderItems from './OrderItems';
 
+
 export default function Hearder(props) {
-  const { addToCart, item, addItems } = props;
+  const { addItems } = props;
+  const totalItems = addItems.reduce((preValue, currentValue) => preValue + currentValue.qty, 0);
 
   return (
     <div className='hearder'>
       <h1>Shopping Carts</h1>
       <div className='cartIcon' onClick={() => {
         console.log("hei")
-        { <OrderItems /> }
+        return (<OrderItems />)
       }}>
-        <FontAwesomeIcon icon={faCartShopping} size="2x" />
+        <div >
+          <FontAwesomeIcon icon={faCartShopping} size="2x" />
+          <span className='cartqty'>
+            {totalItems}
+          </span>
+        </div>
       </div>
     </div>
   )

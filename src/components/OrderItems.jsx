@@ -1,7 +1,6 @@
 
 export default function OrderItems(props) {
   const { addItems, toRemove, addOneItem } = props;
-  console.log(addItems)
   const totalPrice = addItems.reduce((preValue, currentValue) => preValue + currentValue.price * currentValue.qty, 0);
 
   return (
@@ -18,11 +17,11 @@ export default function OrderItems(props) {
             <button onClick={() => toRemove(item)} className="remove">
               -
             </button>
-            <h3>${item.price}</h3>
+            <h3>${item.price.toFixed(2)}</h3>
           </div>
         )
       })}
-      <h3 className='totalPrice'>Total Price: ${totalPrice}</h3>
+      <h3 className='totalPrice'>Total Price: ${totalPrice.toFixed(2)}</h3>
     </div>
   )
 

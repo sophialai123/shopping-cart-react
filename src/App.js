@@ -1,15 +1,14 @@
 import { useState } from 'react';
-import './App.css';
 import ShopCarts from './components/ShopCarts';
 import { ProductData } from './components/ProductData';
 import OrderItems from './components/OrderItems';
 import Hearder from './components/Hearder';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
 
   const [addItems, setAddItems] = useState([])
-  const [showCart, setShowCart] = useState(false)
-  console.log(addItems)
 
   function addToCart(item, quantity) {
     const existItem = addItems.find(x => x.id === item.id);
@@ -27,8 +26,10 @@ function App() {
     } else {
       setAddItems([...addItems, { ...item, "qty": parseInt(quantity) }])
     }
+
   }
 
+  console.log(addItems)
 
   //add only one at time
   const addOneItem = (item) => {
@@ -57,7 +58,7 @@ function App() {
 
   return (
     <div className="App">
-      <Hearder />
+      <Hearder addItems={addItems} />
       <div className='container'>
         { /* loop though each product  */}
         {
@@ -72,7 +73,7 @@ function App() {
           })
         }
       </div>
-      <OrderItems addItems={addItems} addToCart={addToCart} toRemove={toRemove} addOneItem={addOneItem} />
+      <OrderItems addItems={addItems} toRemove={toRemove} addOneItem={addOneItem} />
     </div>
   );
 }
