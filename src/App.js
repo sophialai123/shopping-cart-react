@@ -52,34 +52,33 @@ function App() {
   }
 
 
-  // const checkOut = (item) => {
-  //   setShowCart(addItems)
-  // }
-
   return (
-    <div className="App">
-      <Hearder addItems={addItems} />
-      <div className='container'>
-        { /* loop though each product  */}
-        {
-          ProductData.map((item) => {
-            return (
-              <ShopCarts
-                key={item.id} //unquie key
-                addToCart={addToCart}
-                item={item}
-                toRemove={toRemove}
-              />)
-          })
-        }
+    <Router>
+      <div className="App">
+        <Hearder addItems={addItems} />
+        <div className='container'>
+          { /* loop though each product  */}
+          {
+            ProductData.map((item) => {
+              return (
+                <ShopCarts
+                  key={item.id} //unquie key
+                  addToCart={addToCart}
+                  item={item}
+                  toRemove={toRemove}
+                />)
+            })
+          }
+        </div>
       </div>
-      <OrderItems addItems={addItems} toRemove={toRemove} addOneItem={addOneItem} />
-    </div>
+      <Routes>
+        <Route path="/Order" element={<OrderItems addItems={addItems} toRemove={toRemove} addOneItem={addOneItem} />}>
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
-
 
 
