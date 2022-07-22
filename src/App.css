@@ -89,6 +89,10 @@ h1,
 
 }
 
+.orderContainer h1 {
+  padding-top: 20px;
+}
+
 
 .orderItems,
 .totalPrice {
@@ -123,4 +127,19 @@ h1,
 
 .orderItems .remove {
   background-color: #f04040;
+}
+
+
+
+.orderContainer .checkout {
+  border-radius: 8px;
+  width: 20%;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #36AE7C;
+  margin: 0 0 26px;
+  position: relative;
+  left: 40%;
 }

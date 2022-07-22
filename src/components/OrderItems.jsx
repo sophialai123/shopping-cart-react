@@ -22,6 +22,9 @@ export default function OrderItems(props) {
         )
       })}
       <h3 className='totalPrice'>Total Price: ${totalPrice.toFixed(2)}</h3>
+
+      <button className="checkout" onClick={() => alert("Thank you for shopping!")}>Check out</button>
+
     </div>
   )
 
