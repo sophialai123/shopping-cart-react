@@ -3,17 +3,15 @@ import React, { useState } from "react";
 
 export default function ShopCarts(props) {
   //has own state input for each cardt
+  const [inputText, setInputText] = useState(0);
 
-  //seperate qty here
-
-  //qty.pass addtocart to 
-
-
-  const { img, name, price, addToCart, item, changeText, inputText } = props;
+  // Remove
+  const { addToCart, item } = props;
+  const {img, name, price } = props.item
 
   function handleChange(event) {
     console.log(event.target.value)
-    changeText(event.target.value);
+    setInputText(event.target.value);
 
   }
 

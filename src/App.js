@@ -8,26 +8,24 @@ import Hearder from './components/Hearder';
 function App() {
 
   const [addItems, setAddItems] = useState([])
-  const [inputText, setInputText] = useState(0);
   const [showCart, setShowCart] = useState(false)
-  console.trace(inputText)
   console.log(addItems)
 
   function addToCart(item, quantity) {
-    //find returns the first true condition
-    console.log(item, quantity)
     const existItem = addItems.find(x => x.id === item.id);
     if (existItem) {
-      //inputText value is a string
-      console.log(existItem)
-      setAddItems(addItems.map(x => x.id === item.id ? { ...existItem, "qty": qty + parseInt(quantity) } : x))
-      // setInputText(0)
+      let items = addItems.map((x => {
+        if (x.id === item.id) { return {
+          ...existItem, "qty": existItem.qty + parseInt(quantity)
+        }
+        } else {
+          return x
+        }
+      }))
+      setAddItems(items)
     } else {
-      console.log(addItems, item, quantity)
       setAddItems([...addItems, { ...item, "qty": quantity }])
-      // setInputText(0)
     }
-    //console.log(addItems)
   }
 
 
@@ -52,9 +50,9 @@ function App() {
   }
 
 
-  const checkOut = (item) => {
-    setShowCart(addItems)
-  }
+  // const checkOut = (item) => {
+  //   setShowCart(addItems)
+  // }
 
   return (
     <div className="App">
@@ -66,20 +64,14 @@ function App() {
             return (
               <ShopCarts
                 key={item.id} //unquie key
-                img={item.img}
-                name={item.name}
-                price={item.price}
                 addToCart={addToCart}
                 item={item}
-                addItems={addItems}
                 toRemove={toRemove}
-                changeText={setInputText}
-                inputText={inputText}
               />)
           })
         }
       </div>
-      <OrderItems addItems={addItems} addToCart={addToCart} toRemove={toRemove} addOneItem={addOneItem} inputText={inputText} />
+      <OrderItems addItems={addItems} addToCart={addToCart} toRemove={toRemove} addOneItem={addOneItem} />
 
     </div>
   );
