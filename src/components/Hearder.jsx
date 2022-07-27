@@ -12,9 +12,6 @@ export default function Hearder(props) {
       <Link to='/' style={{ textDecoration: 'none' }}>
         <h1>Coffee Capsules World</h1>
       </Link>
-
-
-
       <Link to='/Order'>
         <div className='cartIcon'>
           <div>
@@ -23,7 +20,6 @@ export default function Hearder(props) {
               {totalItems}
             </span>
           </div>
-
         </div>
       </Link>
     </div>

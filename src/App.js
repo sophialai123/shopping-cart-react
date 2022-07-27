@@ -5,7 +5,6 @@ import OrderItems from './components/OrderItems';
 import Hearder from './components/Hearder';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ProductItems from './components/ProductItems';
 
 function App() {
 
@@ -72,7 +71,6 @@ function App() {
           })
         }
       </div>
-
       <Routes>
         <Route path="/Order" element={<OrderItems addItems={addItems} toRemove={toRemove} addOneItem={addOneItem} />}>
         </Route>
@@ -82,5 +80,6 @@ function App() {
 }
 
 export default App;
+
 
 
