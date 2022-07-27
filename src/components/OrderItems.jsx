@@ -29,10 +29,3 @@ export default function OrderItems(props) {
   )
 
 }
-
-
-
-
-// <div>
-//   {addItems.length === 0 && <div>Cart Is Empty</div>}
-// </div>
