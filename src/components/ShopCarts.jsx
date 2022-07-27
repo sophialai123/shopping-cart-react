@@ -18,10 +18,11 @@ export default function ShopCarts(props) {
       <div className="carInfo">
         <h3>{name}</h3>
         <h3>Price: ${price.toFixed(2)}</h3>
-        <label>Quantity: </label>
         <input onChange={handleChange} value={inputText} min="0" type='number' required /><br />
         <button onClick={() => addToCart(item, inputText)}>Add to Cart</button>
       </div>
     </div>)
 
 }
+
+//<label>: </label>

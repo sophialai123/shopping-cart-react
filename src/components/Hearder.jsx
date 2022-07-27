@@ -10,8 +10,11 @@ export default function Hearder(props) {
   return (
     <div className='hearder'>
       <Link to='/' style={{ textDecoration: 'none' }}>
-        <h1>Shopping Carts</h1>
+        <h1>Coffee Capsules World</h1>
       </Link>
+
+
+
       <Link to='/Order'>
         <div className='cartIcon'>
           <div>
@@ -26,3 +29,22 @@ export default function Hearder(props) {
     </div>
   )
 }
+
+
+
+/* // <a class="back-button" href="#">
+<img src="https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png" alt="back" />
+</a > */
+
+
+
+/* <div className="search">
+        <a className="mobile-search" href="#">
+          <img src="https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png" alt="search" />
+        </a>
+        <form action="#" method="get" className="search-form">
+          <input type="search" placeholder="Search for Vegetables and Fruits" className="search-keyword" />
+          <button className="search-button" type="submit">
+          </button>
+        </form>
+      </div> */

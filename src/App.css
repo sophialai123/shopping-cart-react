@@ -48,10 +48,22 @@ h1,
   height: max-content;
   width: fit-content;
   padding: 20px;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   border-radius: 8px;
 
 }
+
+.shopCard img {
+  width: 220px;
+}
+
+.shopCard h3 {
+  font-size: 16px;
+  width: 220px;
+  /* word-wrap: break-word; */
+  text-align: center;
+}
+
 
 .shopCard:hover {
   -webkit-transform: scale(1.05);
@@ -66,9 +78,9 @@ h1,
   color: white;
   text-align: center;
   margin-top: 20px;
+  width: 150px;
 
 }
-
 
 .shopCard .carInfo {
   text-align: center;

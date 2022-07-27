@@ -4,7 +4,8 @@ import { ProductData } from './components/ProductData';
 import OrderItems from './components/OrderItems';
 import Hearder from './components/Hearder';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ProductItems from './components/ProductItems';
 
 function App() {
 
@@ -56,21 +57,22 @@ function App() {
     <Router>
       <div className="App">
         <Hearder addItems={addItems} />
-        <div className='container'>
-          { /* loop though each product  */}
-          {
-            ProductData.map((item) => {
-              return (
-                <ShopCarts
-                  key={item.id} //unquie key
-                  addToCart={addToCart}
-                  item={item}
-                  toRemove={toRemove}
-                />)
-            })
-          }
-        </div>
       </div>
+      <div className='container'>
+        { /* loop though each product  */}
+        {
+          ProductData.map((item) => {
+            return (
+              <ShopCarts
+                key={item.id} //unquie key
+                addToCart={addToCart}
+                item={item}
+                toRemove={toRemove}
+              />)
+          })
+        }
+      </div>
+
       <Routes>
         <Route path="/Order" element={<OrderItems addItems={addItems} toRemove={toRemove} addOneItem={addOneItem} />}>
         </Route>
