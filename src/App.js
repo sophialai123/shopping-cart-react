@@ -52,11 +52,9 @@ function App() {
   }
 
 
-  return (
-    <Router>
-      <div className="App">
-        <Hearder addItems={addItems} />
-      </div>
+
+  function Product() {
+    return (
       <div className='container'>
         { /* loop though each product  */}
         {
@@ -71,6 +69,17 @@ function App() {
           })
         }
       </div>
+    )
+  }
+
+  return (
+    <Router>
+      <div className="App">
+        <Hearder addItems={addItems} />
+      </div>
+      <Routes>
+        <Route path='/' element={<Product />}></Route>
+      </Routes>
       <Routes>
         <Route path="/Order" element={<OrderItems addItems={addItems} toRemove={toRemove} addOneItem={addOneItem} />}>
         </Route>
@@ -78,6 +87,18 @@ function App() {
     </Router>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App;
 
