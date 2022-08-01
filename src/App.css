@@ -165,3 +165,31 @@ h1,
   position: relative;
   left: 40%;
 }
+
+
+/* Responsive Media */
+
+@media screen and (min-width:375px) and (max-width:425px) {
+
+  h1,
+  .cartIcon {
+    font-size: 28px;
+  }
+
+  .container {
+    margin-left: 17%;
+  }
+}
+
+
+@media screen and (min-width:768px) {
+  .container {
+    margin-left: 13%;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .container {
+    margin-left: 10%;
+  }
+}
